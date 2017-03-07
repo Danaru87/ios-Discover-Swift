@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-1Z-vgD">
-                                <rect key="frame" x="7" y="478" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WU0-Gd-ddK">
                                 <rect key="frame" x="7" y="131" width="362" height="314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,9 +32,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3J-I3-Clr">
                                 <rect key="frame" x="262" y="599" width="97" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ecrire"/>
+                                <state key="normal" title="Générer"/>
                                 <connections>
                                     <action selector="onClickEcrire" destination="BYZ-38-t0r" eventType="touchUpInside" id="PB8-IP-3Po"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZV6-um-F82">
+                                <rect key="frame" x="7" y="604" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hi-Ll-7Yr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,8 +50,8 @@
                     </view>
                     <connections>
                         <outlet property="buttonEcrire" destination="P3J-I3-Clr" id="efM-RV-muN"/>
+                        <outlet property="buttonShare" destination="ZV6-um-F82" id="Gir-Xr-6hE"/>
                         <outlet property="label" destination="WU0-Gd-ddK" id="NUL-l4-YfP"/>
-                        <outlet property="txtField" destination="DSf-1Z-vgD" id="Knd-bA-anf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
